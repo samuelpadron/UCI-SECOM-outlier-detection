@@ -1,0 +1,17 @@
+[project]
+name = "uci-secom-outlier-detection"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Samuel Padron", email = "spadron05@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = []
+
+[project.scripts]
+uci-secom-outlier-detection = "uci_secom_outlier_detection:main"
+
+[build-system]
+requires = ["uv_build>=0.12.8,<0.13.0"]
+build-backend = "uv_build"
