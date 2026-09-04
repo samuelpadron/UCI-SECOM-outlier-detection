@@ -7,7 +7,13 @@ authors = [
     { name = "Samuel Padron", email = "spadron05@gmail.com" }
 ]
 requires-python = ">=3.14"
-dependencies = []
+dependencies = [
+    "matplotlib>=3.11.1",
+    "numpy>=2.5.2",
+    "pandas>=3.0.5",
+    "pytest>=9.1.1",
+    "scikit-learn>=1.9.0",
+]
 
 [project.scripts]
 uci-secom-outlier-detection = "uci_secom_outlier_detection:main"
