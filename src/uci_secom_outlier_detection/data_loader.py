@@ -1,4 +1,3 @@
-import os 
 import requests
 import zipfile
 import pandas as pd 
@@ -29,7 +28,12 @@ def load_dataset():
     download_data()
     data_df = pd.read_csv(DATA_FILE, sep=r'\s+', header=None)
     labels_df = pd.read_csv(LABELS_FILE, sep=r'\s+', header=None)
-    return data_df, labels_df
+    labels = labels_df[0]
+    labels.name = "label"
+    
+    data_df.rename(lambda column: f'feature_{column}',axis="columns", inplace=True)
+            
+    return data_df, labels
     
 
 
